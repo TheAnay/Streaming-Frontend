@@ -1,0 +1,243 @@
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #000000;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #42fbb490;
+    color: white;
+    padding: 1rem 3rem;
+    transition: background-color 0.4s;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Dark Mode Header Links */
+header.dark-mode nav ul li a {
+    color: #ccc;
+}
+
+header.dark-mode nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+body.dark-mode .dark-mode-btn {
+    color: #bbb;
+}
+
+/* Streaming Section Styles */
+.streaming-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 30px;
+    transition: background-color 0.4s;
+}
+
+body.dark-mode .streaming-section {
+    background-color: #181818;
+}
+
+/* Video Container Styles */
+.video-container {
+    flex: 1;
+    max-width: 70%;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Chat Section Styles */
+.chat-container {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s;
+}
+
+body.dark-mode .chat-container {
+    background-color: #2a2a2a;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #42fbb490;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+body.dark-mode .chat-header {
+    background-color: rgba(66, 251, 180, 0.565);
+}
+
+/* Dark Mode Chat Messages */
+.chat-messages {
+    flex: 1;
+    /* padding: 10px; */
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    max-height: 400px;
+}
+
+body.dark-mode .chat-messages {
+    background-color: #333;
+}
+
+.chat-message {
+    position: relative
+;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.chat-message p {
+    margin: 0;
+    padding: 0.3rem;
+    /*border-radius: 5px;*/
+    background-color: #f1f1f1;
+}
+
+body.dark-mode .chat-message p {
+    background-color: #444;
+}
+
+.chat-message.user p {
+    background-color: #9bcbff60;
+}
+
+body.dark-mode .chat-message.user p {
+    background-color: #aae3fa37;
+}
+
+.chat-message.bot p {
+    background-color: #c8f6e183;
+}
+
+body.dark-mode .chat-message.bot p {
+    background-color: #3f4141;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 0.1rem solid #ddd;
+    padding: 1rem;
+    background-color: white;
+}
+
+body.dark-mode .chat-input {
+    background-color: #444;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .chat-input input {
+    background-color: #555;
+    color: white;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #a3f6d9;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .chat-input button{
+    background-color: #1ae174bc;
+}
+
+.chat-input button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #42fbb490;
+    color: white;
+    margin-top: 30px;
+}
+
+body.dark-mode footer {
+    background-color: #rgba(66, 251, 180, 0.565);
+}

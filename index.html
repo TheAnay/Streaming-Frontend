@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Video Streaming</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Stream</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="video-container">
-    <video id="videoPlayer" controls>
-      <source src="your-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="controls">
-      <button id="playPauseBtn">Play</button>
-      <input type="range" id="volumeControl" value="100" max="100" />
-      <span id="volumeLabel">Volume: 100%</span>
-    </div>
-  </div>
+    <header>
+        <div class="logo">
+            <h1>VpsHub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Channels</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Log In</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle" class="dark-mode-btn">🌙</button>
+    </header>
 
-  <script src="script.js"></script>
+    <section class="streaming-section">
+        <div class="video-container">
+            <video id="video-player" controls autoplay>
+                <source src="live-stream.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-box">
+                <div class="chat-header">
+                    <h3>Live Chat</h3>
+                </div>
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Chat messages will be dynamically added here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input-field" placeholder="Type your message..." />
+                    <button id="send-message">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 VpsHub. All Rights Reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
